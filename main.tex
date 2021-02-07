@@ -16,25 +16,42 @@
 \usepackage{lastpage}
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
-%\usepackage[brazilian,hyperpageref]{backref}
-%\usepackage[num,overcite,abnt-emphasize=bf]{abntex2cite}
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[num,overcite,abnt-emphasize=bf]{abntex2cite}
 %%\usepackage[alf,abnt-emphasize=bf]{abntex2cite}
 %%\citebrackets()
-%\citebrackets[]
+\citebrackets[]
 
 \hypersetup{
 	colorlinks=true,
 	linkcolor=black,
 	filecolor=magenta,      
 	urlcolor=blue,
-	citecolor=black,
+	citecolor=blue,
 }
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+  \ifcase #1 %
+    Nenhuma citação no texto.%
+    \or
+    Citado na página #2.%
+  \else
+    Citado nas páginas #2.%
+\fi}%
+% ---
 
 %% Definindo o Autor e o título
 \newcommand{\prof}{Antonio M. M. Hachisuca}
 %\newcommand{\materia}{}
 
-\author{Victor Emanuel Almeida \and Marco Aurélio Guerra Pedroso}
+\author{Victor Emanuel Almeida \and Marco Aurélio G. Pedroso}
 \title{Manual}
 \date{\today}
 
@@ -50,11 +67,11 @@
 
 %%Definindo formato de títulos
 %%\titleformat{comando}[formato, ex:wrap]{mudar fontes}{antes do separador}{separador}{depois do separador}[no fim do comando]
-\titleformat{\section}
-{\large}
-{\thesection}
-{.2cm}
-{}[\titlerule]
+%\titleformat{\section}
+%{\large\tex}
+%{\thesection}
+%{.2cm}
+%{}[\titlerule]
 
 \begin{document}
 \begin{titlepage}
@@ -108,9 +125,44 @@
 
 	\tableofcontents
 	\listoffigures
+	\clearpage
 
 	\section{Introdução}\label{Introdução}
+	\subsection{Pré-requisitos}\label{Pré-requisitos}
+	\begin{itemize}
+		\item Placa de Rede 1 Gb.
+		\item Uma quantidade ``$X$'' de painéis Led.
+		\item Uma quantidade ``$X+1$'' de cabos de rede.
+		\item Um computador com Windows.
+	\end{itemize}
 
-	\newpage
 	\section{Instalação do software}\label{Instalação do software}
+	Para instalar o software segue-se os seguintes passos:
+	\begin{enumerate}
+		\item Entrar no site da Nova Star na aba downloads\cite{siteDownload}
+		\item Acessar a aba software.
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=\textwidth]{Download.png}
+			\caption{\label{fig:Download}Aba de software dentro do site\cite{siteDownload}}
+		\end{figure}
+		\item Fazer o download do instalador do software NovaLCT.
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[scale=.9]{NOVALCT_INSTALL.png}
+			\caption{\label{fig:NOVALCT_INSTALL}Baixando o executável do NovaLCT}
+		\end{figure}
+	\end{enumerate}
+
+	\section{Conexão dos painéis}\label{Conexão dos painéis}
+
+	\section{Configurando a rede}\label{Configurando a rede}
+
+	\section{Configurando o software}\label{Configurando o software}
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\cleardoublepage
+\bibliography{ref}
+
 \end{document}
