@@ -30,6 +30,7 @@
 	citecolor=blue,
 }
 
+\renewcommand{\thefootnote}{\roman{footnote}}
 % ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
@@ -38,12 +39,12 @@
 \renewcommand{\backref}{}
 % Define os textos da citação
 \renewcommand*{\backrefalt}[4]{
-  \ifcase #1 %
-    Nenhuma citação no texto.%
-    \or
-    Citado na página #2.%
-  \else
-    Citado nas páginas #2.%
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+		\or
+		Citado na página #2.%
+	\else
+		Citado nas páginas #2.%
 \fi}%
 % ---
 
@@ -95,7 +96,7 @@
 
 	{\huge\bfseries\thetitle}\\
 	\rule{\linewidth}{0.2 mm}\\[1.5 cm]
-	
+
 	\vspace{2cm}
 	\begin{minipage}[t]{0.4\textwidth}
 		\begin{flushleft}\large
@@ -111,85 +112,85 @@
 		\end{flushright}
 
 	\end{minipage}\\[2 cm]
-	
+
 	\vfill\thedate
-	\end{titlepage}
+\end{titlepage}
 
-	\pagestyle{fancy}
-	%\fancyfoot[L]{Aluno(s):~\theauthor}
-	%\fancyfoot[R]{Prof:~\prof}
-	\fancyfoot[L]{}
-	\fancyfoot[R]{página~\thepage~de~\pageref{LastPage}}
-	\fancyhead[L]{}
-	\fancyhead[R]{}
+\pagestyle{fancy}
+%\fancyfoot[L]{Aluno(s):~\theauthor}
+%\fancyfoot[R]{Prof:~\prof}
+\fancyfoot[L]{}
+\fancyfoot[R]{página~\thepage~de~\pageref{LastPage}}
+\fancyhead[L]{}
+\fancyhead[R]{}
 
-	\tableofcontents
-	\listoffigures
-	\clearpage
+\tableofcontents
+\listoffigures
+\clearpage
 
-	\section{Introdução}\label{Introdução}
-	\subsection{Pré-requisitos}\label{Pré-requisitos}
-	\begin{itemize}
-		\item Computador com sistema operativo Windows 7 ou superior,	
-		\item Placa de rede com capacidade de transferência superior a 1000 Mbps.
-		\item Uma quantidade ``$X$'' de painéis led e cabos de rede.
-		\item Estar com antivírus desativado.
-		\item $237,4$ MB de armazenamento disponível.
-	\end{itemize}
+\section{Introdução}\label{Introdução}
+\subsection{Pré-requisitos}\label{Pré-requisitos}
+\begin{itemize}
+	\item Computador com sistema operativo Windows 7 ou superior,	
+	\item Placa de rede com capacidade de transferência superior a 1000 Mbps.
+	\item Uma quantidade $X$\footnote{Número total de painéis led que deve ser igual ao de cabos de rede utilizados} de painéis led e cabos de rede.
+	\item Estar com antivírus desativado.
+	\item $237,4$ MB de armazenamento disponível.
+\end{itemize}
 
-	\section{Instalação do software}\label{Instalação do software}
-	Para instalar o software segue-se os seguintes passos:
-	\begin{enumerate}
-		\item Entrar no site da Nova Star na aba downloads\cite{siteDownload},
-		\item Acessar a aba software,
+\section{Instalação do software}\label{Instalação do software}
+Para instalar o software segue-se os seguintes passos:
+\begin{enumerate}
+	\item Entrar no site da Nova Star na aba downloads\cite{siteDownload},
+	\item Acessar a aba software,
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=\textwidth]{Download.png}
 			\caption{\label{fig:Download}Aba de software dentro do site\cite{siteDownload}}
 		\end{figure}
-		\item Fazer o download do instalador do software NovaLCT,
+	\item Fazer o download do instalador do software NovaLCT,
 		\newpage
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[scale=.9]{NOVALCT_INSTALL.png}
 			\caption{\label{fig:NOVALCT_INSTALL}Baixando o executável do NovaLCT}
 		\end{figure}
-		\item Clique no Executável instalado,
-		\item Clique em ``OK'' para conceder permissões ao programa,
-		\item Escolha a linguagem,
+	\item Clique no Executável instalado,
+	\item Clique em ``OK'' para conceder permissões ao programa,
+	\item Escolha a linguagem,
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=\textwidth]{D1.jpeg}
 			\caption{\label{fig:D1.jpeg}Primeira tela do processo de instalação}
 		\end{figure}
 		\newpage
-		\item Aceitar termos de uso,
+	\item Aceitar termos de uso,
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.8\textwidth]{D2.jpeg}
 			\caption{\label{fig:D2.jpeg}Segunda tela do processo de instalação}
 		\end{figure}
-		\item Escolher caminho da instalação,
+	\item Escolher caminho da instalação,
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.8\textwidth]{D3.jpeg}
 			\caption{Terceira tela do processo de instalação}
 		\end{figure}
 		\newpage
-		\item Escolher caminho do Menu,
+	\item Escolher caminho do Menu,
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.8\textwidth]{D4.jpeg}
 			\caption{Quarta tela do processo de instalação}
 		\end{figure}
-		\item Escolher criar um ícone na Área de Trabalho,
+	\item Escolher criar um ícone na Área de Trabalho,
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.8\textwidth]{D5.jpeg}
 			\caption{Quinta tela do processo de instalação}
 		\end{figure}
 		\newpage
-		\item Clique em ``instalar'',
+	\item Clique em ``instalar'',
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.8\textwidth]{D6.jpeg}
@@ -201,54 +202,66 @@
 			\caption{Instalação em andamento}
 		\end{figure}
 		\newpage
-		\item Instalando drivers,
+	\item Instalando drivers,
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.75\textwidth]{D8.jpeg}
 			\caption{Tela inicial do processo de instalação dos drivers}
 		\end{figure}
-		\item Clique em ``Finish'',
+	\item Clique em ``Finish'',
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.75\textwidth]{D9.jpeg}
-			\caption{Tela inicial do processo de instalação dos drivers}
+			\caption{Instalando os drivers}
 		\end{figure}
 		\newpage
-		\item Finalize o processo de instalação.
+	\item Finalize o processo de instalação.
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[width=.8\textwidth]{DEnd.jpeg}
-			\caption{Tela inicial do processo de instalação dos drivers}
+			\caption{Última tela do processo de instalação}
 		\end{figure}
-	\end{enumerate}
+\end{enumerate}
 
-	\section{Conexão dos painéis}\label{Conexão dos painéis}
-		\begin{enumerate}
-			\item 
-		\end{enumerate}
-	\section{Configurando a rede}\label{Configurando a rede}
+\newpage
+\section{Configurando o software}\label{Configurando o software}
+Tendo o software sido instalado com sucesso, ao abri-lo deve-se obter uma tela como a Figura~\ref{fig:CS1.jpeg} abaixo:
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{CS1.jpeg}
+	\caption{\label{fig:CS1.jpeg}Tela inicial do software}
+\end{figure}
 
-	\section{Configurando o software}\label{Configurando o software}
-	Tendo o software sido instalado com sucesso, ao abri-lo deve-se obter uma tela como a Figura~\ref{fig:CS1.jpeg} abaixo:
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[width=\textwidth]{CS1.jpeg}
-		\caption{\label{fig:CS1.jpeg}}
-	\end{figure}
+\subsection{Acessando como administrador}\label{Acessando como administrador}
+Agora logue como admin, entrando na aba ``User (U)'' e clicando na opção ``Advanced Synchrounus System User Login''.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{CS2.jpeg}
+	\caption{\label{fig:CS2.jpeg}Aba para efetuar login}
+\end{figure}
 
-	Agora logue como admin, entrando na aba ``User (U)'' e clicando na opção ``Advanced Synchrounus System User Login''.
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[width=\textwidth]{CS2.jpeg}
-		\caption{\label{fig:CS2.jpeg}}
-	\end{figure}
+\newpage
+Entre com a senha que por padrão é ``admin''.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.6\textwidth]{CS3.jpeg}
+	\caption{\label{fig:CS3.jpeg}Menu de login}
+\end{figure}
 
-	Entre com a senha ``admin''.
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[width=.6\textwidth]{CS3.jpeg}
-		\caption{\label{fig:CS3.jpeg}}
-	\end{figure}
+\section{Configurando a rede}\label{Configurando a rede}
+
+Quando o software é instalado com sucesso, por dependência instala-se também um gerenciador de rede, o qual é executado junto com o NovaLCT, gerando o seguinte item na barra de tarefas, como vemos na Figura~\ref{fig:barra_de_tarefas.jpeg}:
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{barra_de_tarefas.jpeg}
+	\caption{\label{fig:barra_de_tarefas.jpeg}Ícone do Gerenciador de rede}
+\end{figure}
+
+\section{Conexão dos painéis}\label{Conexão dos painéis}
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
