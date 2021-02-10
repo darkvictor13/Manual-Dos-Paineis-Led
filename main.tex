@@ -125,8 +125,9 @@
 \fancyhead[R]{}
 
 \tableofcontents
+\newpage
 \listoffigures
-\clearpage
+\newpage
 
 \section{Introdução}\label{Introdução}
 \subsection{Pré-requisitos}\label{Pré-requisitos}
@@ -138,6 +139,7 @@
 	\item $237,4$ MB de armazenamento disponível.
 \end{itemize}
 
+\newpage
 \section{Instalação do software}\label{Instalação do software}
 Para instalar o software segue-se os seguintes passos:
 \begin{enumerate}
@@ -149,12 +151,12 @@ Para instalar o software segue-se os seguintes passos:
 			\caption{\label{fig:Download}Aba de software dentro do site\cite{siteDownload}}
 		\end{figure}
 	\item Fazer o download do instalador do software NovaLCT,
-		\newpage
 		\begin{figure}[!htb]
 			\centering
 			\includegraphics[scale=.9]{NOVALCT_INSTALL.png}
 			\caption{\label{fig:NOVALCT_INSTALL}Baixando o executável do NovaLCT}
 		\end{figure}
+		\newpage
 	\item Clique no Executável instalado,
 	\item Clique em ``OK'' para conceder permissões ao programa,
 	\item Escolha a linguagem,
@@ -223,6 +225,57 @@ Para instalar o software segue-se os seguintes passos:
 		\end{figure}
 \end{enumerate}
 
+		\newpage
+\section{Configurando a rede}\label{Configurando a rede}
+
+Quando o software é instalado com sucesso, por dependência instala-se também um gerenciador de rede, o qual é executado junto com o NovaLCT, gerando o seguinte item na barra de tarefas, como vemos na Figura~\ref{fig:barra_de_tarefas.jpeg}:
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{barra_de_tarefas.jpeg}
+	\caption{\label{fig:barra_de_tarefas.jpeg}Ícone do Gerenciador de rede}
+\end{figure}
+
+Para garantir o funcionamento correto da comunicação, realiza-se os seguintes passos:
+\begin{enumerate}
+	\item clicar no ícone na barra de tarefas
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics{menuRede.jpg}
+		\caption{\label{fig:menuRede.jpg}Menu da barra de tarefas}
+	\end{figure}
+	\newpage
+	\item Clique em ``Detect Config''
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics{menuRede1.jpg}
+		\caption{\label{fig:menuRede1.jpg}Abrindo menu para modificar configuração de rede}
+	\end{figure}
+	\item Abrindo essa tela, clique em ``Ok''
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=.8]{detectConfig.jpeg}
+		\caption{\label{fig:detectConfig.jpeg}Habilitando controle virtual e detectando controlador}
+	\end{figure}
+	\item Clique novamente no ícone da barra de tarefas
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics{menuRede.jpg}
+		\caption{\label{fig:menuRede.jpg}Menu da barra de tarefas}
+	\end{figure}
+	\item Agora selecione ``Select NetWork Card''
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics{menuRede2.jpg}
+		\caption{\label{fig:menuRede2.jpg}Abrindo menu para identificar placa de rede}
+	\end{figure}
+	\cleardoublepage
+	\item Sendo aberta a tela, selecione a placa de rede correta, então clique em ``OK''.
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=.7\textwidth]{selectNetworkCard.jpeg}
+			\caption{\label{fig:selectNetworkCard.jpeg}Selecionando placa de rede}
+		\end{figure}
+\end{enumerate}
 \newpage
 \section{Configurando o software}\label{Configurando o software}
 Tendo o software sido instalado com sucesso, ao abri-lo deve-se obter uma tela como a Figura~\ref{fig:CS1.jpeg} abaixo:
@@ -248,15 +301,9 @@ Entre com a senha que por padrão é ``admin''.
 	\caption{\label{fig:CS3.jpeg}Menu de login}
 \end{figure}
 
-\section{Configurando a rede}\label{Configurando a rede}
+\subsection{Configurando painéis}\label{Configurando painéis}
 
-Quando o software é instalado com sucesso, por dependência instala-se também um gerenciador de rede, o qual é executado junto com o NovaLCT, gerando o seguinte item na barra de tarefas, como vemos na Figura~\ref{fig:barra_de_tarefas.jpeg}:
-\begin{figure}[!htb]
-	\centering
-	\includegraphics{barra_de_tarefas.jpeg}
-	\caption{\label{fig:barra_de_tarefas.jpeg}Ícone do Gerenciador de rede}
-\end{figure}
-
+\cleardoublepage
 \section{Conexão dos painéis}\label{Conexão dos painéis}
 \begin{enumerate}
 	\item 
