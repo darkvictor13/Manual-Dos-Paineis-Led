@@ -129,10 +129,10 @@
 \listoffigures
 \newpage
 
-\section{Introdução}\label{Introdução}
-\subsection{Pré-requisitos}\label{Pré-requisitos}
+%\section{Introdução}\label{Introdução}
+\section{Pré-requisitos}\label{Pré-requisitos}
 \begin{itemize}
-	\item Computador com sistema operativo Windows 7 ou superior,	
+	\item Computador com sistema operacional Windows 7 ou superior,	
 	\item Placa de rede com capacidade de transferência superior a 1000 Mbps.
 	\item Uma quantidade $X$\footnote{Número total de painéis led que deve ser igual ao de cabos de rede utilizados} de painéis led e cabos de rede.
 	\item Estar com antivírus desativado.
@@ -141,9 +141,53 @@
 
 \cleardoublepage
 \section{Conexão dos painéis}\label{Conexão dos painéis}
-\begin{enumerate}
-	\item 
-\end{enumerate}
+Modo de conexão dos painéis
+
+\subsection{Alimentação}\label{Alimentação}
+\subsubsection{Conexão Padrão}\label{Conexão Padrão}
+Os painéis, para seu bom funcionamento, necessitam ser conectados em uma fonte de energia de 220V (Volts).
+
+Se você possui o adaptador próprio, ``Shangwen indoor LED'', basta fazer a conexão de cada painel a uma tomada de 220 V.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{caboAlimentacao.png}
+	\caption{\label{fig:caboAlimentacao.png}Adaptador de cabo de alimentação}
+\end{figure}
+
+\newpage
+
+\subsubsection{Conexão Adaptada}\label{Conexão Adaptada}
+Caso não possua os cabos adequados, pode-se realizar o cabeamento diretamente na placa de alimentação do painel.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.96\textwidth]{painel0.jpeg}
+	\caption{\label{fig:painel0.jpeg}Placa de alimentação do painel}
+\end{figure}
+
+Para isso conecte a extremidade de um dos cabos na tomada, e a outra extremidade aos polos ``N'' e ``L'' da painel. De preferência faça a conexão nas entradas que possuem apenas um cabo já conectado nela.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=.9\textwidth]{painel1Cp.jpeg}
+	\caption{\label{fig:}Locais para conexão de cabos de energia}
+\end{figure}
+
+\newpage
+
+Utilizando-se o método apresentado nessa seção~\ref{Conexão Adaptada}, se obtém o seguinte cabeamento.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[height=.88\textheight]{painel2.jpeg}
+	\caption{\label{fig:painel2.jpeg}Nossa cabeamento para alimentação}
+\end{figure}
+
+\clearpage
+
+\subsection{Comunicação}\label{Comunicação}
+
+Para realizar a conexão entre painéis basta fazer o uso de cabos de rede simples de um painel para o outro, sendo que o primeiro deve ser conectado ao computador. Vale ressaltar que cada painel possui duas portas de rede, ambas funcionam tanto como entrada e saída dependendo unicamente da configuração realizada dentro do software NovaLCT, como podemos ver na seção~\ref{Ligação entre os painéis}.
 
 \newpage
 \section{Instalação do software}\label{Instalação do software}
@@ -291,6 +335,7 @@ Tendo o software sido instalado com sucesso, ao abri-lo deve-se obter uma tela c
 	\caption{\label{fig:CS1.jpeg}Tela inicial do software}
 \end{figure}
 
+\newpage
 \subsection{Acessando como administrador}\label{Acessando como administrador}
 Agora logue como admin, entrando na aba ``User (U)'' e clicando na opção ``Advanced Synchrounus System User Login''.
 \begin{figure}[!htb]
@@ -299,7 +344,7 @@ Agora logue como admin, entrando na aba ``User (U)'' e clicando na opção ``Adv
 	\caption{\label{fig:CS2.jpeg}Aba para efetuar login}
 \end{figure}
 
-\newpage
+\vfill
 Entre com a senha que por padrão é ``admin''.
 \begin{figure}[!htb]
 	\centering
@@ -307,16 +352,19 @@ Entre com a senha que por padrão é ``admin''.
 	\caption{\label{fig:CS3.jpeg}Menu de login}
 \end{figure}
 
+\newpage
 \subsection{Configurando painéis}\label{Configurando painéis}
-Primeiramente entre na aba ``screen configuration''
+Primeiramente entre na aba ``Screen configuration''
 %Pegar imagem q da p pegar screen configuration
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=\textwidth]{}
-	\caption{\label{fig:}Screen configuration}
+	\includegraphics[width=\textwidth]{menuAdm.jpeg}
+	\caption{\label{fig:menuAdm.jpeg}Screen configuration}
 \end{figure}
 
-Seleciona a placa de rede a qual está conectado os painéis
+\vfill
+
+Após isso, seleciona a placa de rede a qual está conectado os painéis
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{SC0.jpeg}
@@ -341,7 +389,7 @@ Se tudo ocorrer como esperado o painel conectado ao computador deve espelhar o c
 	\caption{\label{fig:Save.jpeg}Enviando as configurações e salvando mudanças}
 \end{figure}
 
-\newpage
+\clearpage
 \subsection{Ligação entre os painéis}\label{Ligação entre os painéis}
 Para informar ao software em que ordem os painéis estão conectados, primeiramente deve-se entrar na aba ``Screen Conection''.
 \begin{figure}[!htb]
@@ -360,12 +408,15 @@ Se você nunca antes conectou os painéis, primeiramente deve selecionar a quant
 \end{figure}
 
 \newpage
+
 Agora escolha a quantidade de painéis, em relação a altura e largura.
+
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{qntPaineis.jpeg}
 	\caption{\label{fig:qntPaineis.jpeg}Selecionando quantidade de painéis}
 \end{figure}
+\newpage
 
 Uma vez selecionada a quantidade de painéis, é preciso indicar a sequência em que os painéis estão conectados.
 
@@ -373,14 +424,15 @@ Para isto basta ir clicando nos painéis na sequência em que eles são conectad
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=\textwidth]{}
+	\includegraphics[width=\textwidth]{conexao.jpeg}
 	\caption{\label{fig:}Exemplo de conexão dos painéis}
 \end{figure}
 
-%Marcar send to Receiver e save
+\newpage
+Tendo configurado como os painéis estão conectados basta selecionar send to Receiver e save.
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=\textwidth]{}
+	\includegraphics[width=\textwidth]{conexaoCp.jpeg}
 	\caption{\label{fig:}Enviar e salvar}
 \end{figure}
 
